@@ -1,0 +1,24 @@
+# 视频字幕系统配置文件
+asr:
+  model_name: "small"          # tiny, base, small, medium, large
+  device: "cuda"               # cuda 或 cpu
+  language: "zh"               # 中文
+  compute_type: "float16"      # 推理精度
+
+alignment:
+  use_ctc: true                # 是否启用CTC强制对齐
+  beam_size: 5
+
+ocr:
+  enable: false
+  lang: "ch"                   # 中英文混合
+  use_angle_cls: true
+
+paths:
+  temp_dir: "./temp"
+  output_dir: "./output"
+  model_cache: "./models"
+
+gui:
+  window_width: 1200
+  window_height: 800
